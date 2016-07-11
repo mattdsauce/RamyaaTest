@@ -6,6 +6,9 @@ var test = require('selenium-webdriver/testing');
 test.describe('SauceLabs Helper', function() {
 
   test.it('Go to Google', function() {
+
+    cconsole.log("PRINTING ALL ENV: " + require('util').inspect(process.env));
+
     if(process.env.SAUCELABS) {
         var username = process.env.SAUCE_USERNAME;
         var accessKey = process.env.SAUCE_ACCESS_KEY;
@@ -13,7 +16,7 @@ test.describe('SauceLabs Helper', function() {
         withCapabilities({
           'browserName': process.env.SELENIUM_BROWSER,
           'platform': process.env.SELENIUM_PLATFORM,
-          'version': 'latest',
+          'version': process.env.SELENIUM_VERSION,
           'username': username,
           'accessKey': accessKey,
         }).
