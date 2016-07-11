@@ -1,0 +1,32 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "description": "Test suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha saucehelper.js --reporter mochawesome -t 20000",
+    "saucelabs": "SAUCELABS=true mocha saucehelper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "ramyaa",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs-extra": "^0.30.0",
+    "istanbul": "^0.4.3",
+    "js-yaml": "^3.6.0",
+    "mocha": "^2.4.5",
+    "mochawesome": "^1.3.4",
+    "remove": "^0.1.5",
+    "shelljs": "^0.7.0",
+    "tmp": "0.0.28",
+    "selenium-webdriver": "^2.53.2"
+  }
+}
