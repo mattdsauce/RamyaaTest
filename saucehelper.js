@@ -7,7 +7,7 @@ test.describe('SauceLabs Helper', function() {
 
   test.it('Go to Google', function() {
 
-    cconsole.log("PRINTING ALL ENV: " + require('util').inspect(process.env));
+    console.log("PRINTING ALL ENV: " + require('util').inspect(process.env));
 
     if(process.env.SAUCELABS) {
         var username = process.env.SAUCE_USERNAME;
